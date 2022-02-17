@@ -1,38 +1,58 @@
+<!-- Documento tipo HTML -->
 <!DOCTYPE html>
+<!-- Raiz do documento HTML -->
 <html>
 
+<!-- Cabeça do HTML onde encontra-se o conjunto de dados sobre o documento -->
 <head>
+  <!-- Elemento definindo a informação de codificação binária em: "UTF-8", o charset é um declarante -->
   <meta charset="UTF-8">
+  <!-- Elemento que define o título que será mostrado na aba da página, recebeu: "Document" -->
   <title>Cardápio</title>
 
-  <!-- Bootstrap - CSS -->
+  <!-- Elemento que faz a ligação com um recurso externo, neste caso: Bootstrap - CSS, o href é um vinculador e o rel faz a relação entre documentos -->
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
+<!-- Corpo no qual está incluso todo o conteúdo do documento -->
 <body>
+  <!-- Elemento semântico que descreve o propósito do elemento "cabeçalho", ou seja, o início do "body" -->
   <header>
-    <!-- Toolbar -->
+    <!-- Elemento que faz uma seção com links de navegação, o class permite o CSS e Javascript acessar o elemento, conhecido como "Menu de navegação", Toolbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <!-- Agrupador de elementos dentro de uma seção, o class está definindo o modelo do elemento -->
       <div class="container-fluid">
+        <!-- Ancorador com classe definida CSS e vinculador inválido/off -->
         <a class="navbar-brand" href="#">
           Coffee
+          <!-- Elemento responsável por diminuir a fonte do conteúdo entre o marcadores-->
           <small>Arábica</small>
         </a>
 
+        <!-- Representa um botão, clicável, com classe definida, tipo botão apenas, com "data" para mostrar e esconder conteúdo(Bootstrap), com controlador de presença, controlador de expansão e evidenciador do valor do conteúdo -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Agrupa elementos para fins de estilo, class com base no Bootstrap-->
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Agrupador de elementos dentro de uma seção, o class está definindo o modelo do elemento e um id para identificação -->
         <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Lista de itens com classe definida -->
           <ul class="navbar-nav">
+            <!-- Elemento que representa o item na lista, com classe definida -->
             <li class="nav-item">
+              <!-- Ancorador com classe definida e com link ATIVO redirecionando ao HTML principal-->
               <a class="nav-link" href="./index.html">Home</a>
             </li>
+            <!-- Elemento que representa o item na lista, com classe definida -->
             <li class="nav-item">
+              <!-- Ancorador com classe definida, com o tipo de representação do item no bloco e com link inativo-->
               <a class="nav-link active" aria-current="page" href="#">Cardápio</a>
             </li>
+            <!-- Elemento que representa o item na lista, com classe definida -->
             <li class="nav-item">
+              <!-- Ancorador com classe definida e com link inativo-->
               <a class="nav-link" href="#">Sobre</a>
             </li>
           </ul>
@@ -41,59 +61,80 @@
     </nav>
 
   </header>
+
+  <!-- Elemento semântico que descreve o propósito do elemento "principal", ou seja, o meio do "body" -->
   <main>
+    <!-- Elemento semântico para criar uma seção genérica -->
     <section class="my-3">
 
-      <!-- Grid -->
+      <!-- Agrupador de elementos dentro de uma seção com class definido, Grid -->
       <div class="container">
 
-        <!-- Button trigger modal -->
+        <!-- Representa um botão, clicável, classe definida e com "data" para movimentação do conteúdo do elemento(Bootstrap), Button trigger modal -->
         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           +
         </button>
 
-        <!-- Modal -->
+        <!-- Agrupador de elementos dentro de uma seção, com class definido, acessibilidade completa, um id para identificação, controle de foco, com indicador de ID do elemento e acessibilidade por relevância, Modal -->
         <div class="modal fade" data-bs-keyboard="false" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!-- Agrupador de elementos dentro de uma seção com class definido -->
           <div class="modal-dialog">
+            <!-- Agrupador de elementos dentro de uma seção com class definido -->
             <div class="modal-content">
+              <!-- Agrupador de elementos dentro de uma seção com class definido como a cabeça do Modal -->
               <div class="modal-header">
+                <!-- Um elemento que representa um cabeçalho em tamanho pequeno, com class definido e id para identificação do elemento -->
                 <h5 class="modal-title" id="exampleModalLabel">Adicionar Item</h5>
+                <!-- Representa um botão, clicável, classe definida de saída e com "data" para movimentação do conteúdo e definindo uma variável na tag do atual elemento -->
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
+              <!-- Agrupador de elementos dentro de uma seção com class definido como o corpo do Modal -->
               <div class="modal-body">
-
+                <!-- Um elemento que representa um cabeçalho em tamanho grande -->
                 <h1>Conteúdo do modal</h1>
 
-                <!-- Formulário -->
+                <!-- Representa um conjunto de elementos que fazem parte deste elemento, Formulário -->
                 <form id="foodForm">
+                  <!-- Agrupador de elementos dentro de uma seção com class definido, Nome -->
                   <div class="mb-3">
-                    <!-- Nome -->
+                    <!-- Representa uma legenda para um item, com ID(for) de elemento do formulário e class definido, Nome -->
                     <label for="nome" class="form-label">Nome</label>
+                    <!-- Representa a entrada para receber dados do usuário, textual, designação: "nome", com id de identificação e class definido -->
                     <input type="text" name="nome" id="nome" class="form-control">
+                    <!-- Agrupador de elementos dentro de uma seção, um id para identificação e com class definido -->
                     <div id="nomeHelp" class="form-text">Adicione o nome do Alimento.</div>
                   </div>
 
-                  <!-- Descrição -->
+                  <!-- Agrupador de elementos dentro de uma seção com class definido, Descrição -->
                   <div class="mb-3">
+                    <!-- Representa uma legenda para um item, com ID(for) de elemento do formulário e class definido, Descrição -->
                     <label for="descricao" class="form-label">Descrição</label>
+                    <!-- Representa a entrada para receber dados do usuário, textual, designação: "descricao", com id de identificação e class definido -->
                     <input type="text" name="descricao" id="descricao" class="form-control">
                   </div>
 
-                  <!-- Preço -->
+                  <!-- Agrupador de elementos dentro de uma seção com class definido, Preço -->
                   <div class="mb-3">
+                    <!-- Representa uma legenda para um item, com ID(for) de elemento do formulário e class definido, Preço -->
                     <label for="preco" class="form-label">Preço</label>
+                    <!-- Representa a entrada para receber dados do usuário, textual, designação: "preco", com id de identificação e class definido -->
                     <input type="text" name="preco" id="preco" class="form-control">
                   </div>
 
-                  <!-- Imagem -->
+                  <!-- Agrupador de elementos dentro de uma seção com class definido, Imagem -->
                   <div class="mb-3">
+                    <!-- Representa uma legenda para um item, com ID(for) de elemento do formulário e class definido, Imagem -->
                     <label for="imagem" class="form-label">Imagem</label>
+                    <!-- Representa a entrada para receber dados do usuário, textual, designação: "imagem", com id de identificação e class definido -->
                     <input type="text" name="imagem" id="imagem" class="form-control">
                   </div>
 
+                  <!-- Agrupador de elementos dentro de uma seção com class definido como o rodapé do Modal -->
                   <div class="modal-footer">
+                    <!-- Representa um botão, clicável, classe definida e com "data" para movimentação do conteúdo -->
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-
+                    
+                    <!-- Representa um botão, para submissão de dados, classe definida e com id para identificação -->
                     <!-- <input type="submit" value="Adicionar"> -->
                     <button type="submit" class="btn btn-primary" id="adicionarFoodButton">
                       Adicionar
@@ -107,7 +148,7 @@
           </div>
         </div>
 
-        <!-- Linha -->
+        <!-- Agrupador de elementos dentro de uma seção com id para identificação e class definido, Linha -->
         <div id="itens-cardapio" class="row">
 
           <!-- Colunas-->
@@ -118,12 +159,13 @@
     </section>
 
   </main>
+  <!-- Elemento semântico que descreve o propósito do elemento "rodapé", ou seja, o fim do "body" -->
   <footer></footer>
 
-  <!-- Cardápio -->
+  <!-- Elemento que faz a ligação entre o HTML e o SCRIPT, indicando onde está o script externo, módulo Javascript, Cardápio -->
   <script src="./js/cardapio.js" type="module"></script>
 
-  <!-- Bootstrap - Js -->
+  <!-- Elemento que faz a ligação entre o HTML e o SCRIPT, indicando onde está o script externo, Bootstrap - Js -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
